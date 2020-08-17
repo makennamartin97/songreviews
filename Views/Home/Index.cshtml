@@ -1,0 +1,47 @@
+﻿@using songreviews.Models
+@model List<Song>
+
+<head>
+    <style>
+        .card{
+            display: inline-block;
+            min-width:280px;
+        }
+
+    </style>
+
+</head>
+
+
+<div class="container-fluid">
+  <div class="row align-items-stretch justify-content-start card-deck">
+      
+   
+            @foreach(Song a in Model)
+            {
+                <div class="col-auto mb-2 ">
+                
+
+                <a href="songreviews/@a.songID">
+                    <div class="card text-center"style="width: 18rem;">
+                        <div class="card-header bg-danger text-light">
+                            <p>@a.Title</p>
+                        </div>
+                        <div class="card-body text-dark">
+                            <p>@a.Artist</p>
+                            <p>@a.Stars stars</p>
+
+                        </div>
+                    </div>
+                </a>
+                </div>
+                
+
+            }
+            
+        
+        
+   
+    </div>
+
+</div>

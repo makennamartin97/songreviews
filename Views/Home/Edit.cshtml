@@ -1,0 +1,49 @@
+
+@model Song
+<div asp-validation-summary="All"></div>
+
+<div class="row">
+    <div class="offset-sm-3 col-sm-6">
+
+        <form action="/@Model.songID/update" method="post" class="card">
+            <div class="card-header bg-info text-white">
+                Update Review:
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label asp-for="Title">Title: </label>
+                    <input asp-for="Title" class="form-control">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Artist">Artist: </label>
+                    <input asp-for="Artist" class="form-control">
+                    <span class="text-danger" asp-validation-for="Artist"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Genre">Genre: </label>
+                    <input asp-for="Genre" class="form-control">
+                    <span class="text-danger" asp-validation-for="Genre"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Stars">Stars: </label>
+                    <input asp-for="Stars" class="form-control">
+
+                    <span class="text-danger" asp-validation-for="Stars"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Genre">Genre: </label>
+                    <input asp-for="Genre" class="form-control">
+                    <span class="text-danger" asp-validation-for="Genre"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Review">Review: </label>
+                    <input asp-for="Review" class="form-control">
+                    <span class="text-danger" asp-validation-for="Review"></span>
+                </div>
+                <input type="submit" class="btn btn-info" value="Update">
+            </div>
+        </form>
+    </div>
+</div>
